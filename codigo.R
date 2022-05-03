@@ -1,5 +1,6 @@
 x <- c("a", "b", "c")
 as.numeric(x)
 as.logical(x)
+y <- c(0:5)
 as.numeric(y)
 as.logical(y)
