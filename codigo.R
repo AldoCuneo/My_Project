@@ -30,6 +30,7 @@ n <- 1;N <- 10
 par(mfrow = c(1, 1), mar = c(10, 4, 1, 1))
 barplot(height = df.latam.country.NA$hosts,names = df.latam.country.NA$location.country,las = 2, col = "black", main = "SMB by Company")
 
+# GRAFICO SMB ?????
 
 
 
