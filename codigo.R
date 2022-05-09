@@ -21,8 +21,9 @@ head("latam_smb_by_os")
 df.company <- as.data.frame(pe_smb_by_company, header = FALSE)
 df.company.NA <- tidyr::drop_na(df.company)
 n <- 1;N <- 10
-par(mfrow = c(1, 1), mar = c(18, 4, 1, 1))
-barplot(height = df.company.NA$hosts[n:N],names = df.company.NA$autonomous_system.name[n:N],las = 2, col = "black", main = "SMB by Company")
+par(mfrow = c(1, 1), mar = c(16, 4, 1, 1))
+my_bar <- barplot(ylim = c(0,600),height = df.company.NA$hosts[n:N],names = df.company.NA$autonomous_system.name[n:N],las = 2, col = c(rgb(0.3,0.2,0.4,0.6), rgb(0.2,0.5,0.5,0.6) , rgb(0.7,0.9,0.6,0.6) ,  rgb(0.3,0.3,0.4,0.1) ), main = "SMB by Company")
+text(my_bar, df.company.NA$hosts[n:N] + 20 , paste("Host: ", df.company.NA$hosts[n:N], sep = "") ,cex = 1)
 
 # GRAFICO SMB LATAM POR PAIS
 df.latam.country <- as.data.frame(latam_smb_by_country, header = FALSE)
