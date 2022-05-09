@@ -54,4 +54,4 @@ ggplot(df.latam.top5.otros, aes(ymax = df.latam.top5.otros$ymax, ymin = df.latam
   xlim(c(2.5, 4)) +
   theme_void() +
   ggtitle("Top 5 Paises LATAM SMB") +
-  theme(legend.position = "none", plot.title = element_text(color = "blue", size = 20, face = "bold.italic", hjust = 0.5))
+  theme(legend.position = "none", plot.title = element_text(color = "black", size = 20, face = "bold.italic", hjust = 0.5))
